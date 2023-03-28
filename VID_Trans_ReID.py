@@ -237,6 +237,6 @@ if __name__ == '__main__':
                print('CMC: %.4f, mAP : %.4f'%(cmc,map))
                if cmc_rank1 < cmc:
                   cmc_rank1=cmc
-                  torch.save(model.state_dict(),os.path.join('/home2/zwjx97/VID-Trans-ReID',  Dataset_name+'Main_Model.pth')) 
+                  torch.save(model.state_dict(),os.path.join('/VID-Trans-ReID',  Dataset_name+'Main_Model.pth')) 
         
      
