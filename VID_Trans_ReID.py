@@ -149,6 +149,8 @@ def test(model, queryloader, galleryloader, pool='avg', use_gpu=True, ranks=[1, 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="VID-Trans-ReID")
     parser.add_argument(
+        "--Dataset_name", default="", help="The name of the DataSet", type=str)
+    parser.add_argument(
         "--ViT_path", default="", help="The name of the pretrained model",
         type=str)
     args = parser.parse_args()
