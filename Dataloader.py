@@ -64,7 +64,7 @@ def dataloader(Dataset_name):
     view_num = dataset.num_train_vids
 
    
-    train_loader = DataLoader(train_set, batch_size=64,sampler=RandomIdentitySampler(dataset.train, 64,4),num_workers=4, collate_fn=train_collate_fn)
+    train_loader = DataLoader(train_set, batch_size=16,sampler=RandomIdentitySampler(dataset.train, 64,4),num_workers=4, collate_fn=train_collate_fn)
   
     q_val_set = VideoDataset(dataset.query, seq_len=4, sample='dense', transform=val_transforms)
     g_val_set = VideoDataset(dataset.gallery, seq_len=4, sample='dense', transform=val_transforms)
