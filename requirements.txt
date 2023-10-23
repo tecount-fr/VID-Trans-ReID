@@ -1,5 +1,6 @@
-torch
-torchvision
+# torch
+# torchvision
 timm
-yacs
-opencv-python
+torch_ema
+# yacs
+# opencv-python
