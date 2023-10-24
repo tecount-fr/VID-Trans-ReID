@@ -87,7 +87,11 @@ def test(model, queryloader, galleryloader, pool='avg', use_gpu=True, ranks=[1, 
        
         if use_gpu:
             imgs = imgs.cuda()
-        imgs = Variable(imgs, volatile=True)
+
+      with torch.no_grad():
+         imgs = Variable(imgs)
+
+         
         
         b,  s, c, h, w = imgs.size()
         
